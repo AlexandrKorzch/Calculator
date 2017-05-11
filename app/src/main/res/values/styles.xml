@@ -9,12 +9,14 @@
     </style>
 
     <style name="button_style">
-        <item name="android:layout_width">88dp</item>
-        <item name="android:layout_height">88dp</item>
+        <item name="app:layout_widthPercent">33%</item>
+        <item name="app:layout_heightPercent">25%</item>
+        <item name="app:layout_marginTopPercent">0dp</item>
+        <item name="app:layout_marginLeftPercent">0dp</item>
     </style>
 
     <style name="btn_second_style">
-        <item name="android:layout_width">88dp</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">0dp</item>
         <item name="android:layout_weight">1</item>
     </style>

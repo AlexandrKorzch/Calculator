@@ -8,7 +8,6 @@
     android:orientation="vertical"
     tools:context="com.korzh.user.calculator.MainActivity">
 
-
     <TextView
         android:id="@+id/tv_field"
         android:layout_width="match_parent"
@@ -23,14 +22,16 @@
         android:layout_weight="2"
         android:orientation="horizontal">
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
+        <android.support.percent.PercentRelativeLayout
+            android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="0.7"
             android:background="#e3ec9d">
 
             <Button
                 android:id="@+id/btn_seven"
-                style="@style/button_style"
+                app:layout_widthPercent="33%"          
+                app:layout_heightPercent="25%"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
@@ -38,7 +39,8 @@
 
             <Button
                 android:id="@+id/btn_eight"
-                style="@style/button_style"
+                app:layout_widthPercent="33%"          
+                app:layout_heightPercent="25%"
                 android:layout_alignParentTop="true"
                 android:layout_toEndOf="@id/btn_seven"
                 android:layout_toRightOf="@id/btn_seven"
@@ -46,7 +48,8 @@
 
             <Button
                 android:id="@+id/btn_nine"
-                style="@style/button_style"
+                app:layout_widthPercent="33%"          
+                app:layout_heightPercent="25%"
                 android:layout_alignParentTop="true"
                 android:layout_toEndOf="@id/btn_eight"
                 android:layout_toRightOf="@id/btn_eight"
@@ -54,7 +57,8 @@
 
             <Button
                 android:id="@+id/btn_four"
-                style="@style/button_style"
+                app:layout_widthPercent="33%"          
+                app:layout_heightPercent="25%"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@id/btn_seven"
@@ -62,7 +66,8 @@
 
             <Button
                 android:id="@+id/btn_five"
-                style="@style/button_style"
+                app:layout_widthPercent="33%"          
+                app:layout_heightPercent="25%"
                 android:layout_below="@id/btn_eight"
                 android:layout_toEndOf="@id/btn_four"
                 android:layout_toRightOf="@id/btn_four"
@@ -70,7 +75,8 @@
 
             <Button
                 android:id="@+id/btn_six"
-                style="@style/button_style"
+                app:layout_widthPercent="33%"          
+                app:layout_heightPercent="25%"
                 android:layout_below="@+id/btn_eight"
                 android:layout_toEndOf="@+id/btn_five"
                 android:layout_toRightOf="@+id/btn_five"
@@ -78,7 +84,8 @@
 
             <Button
                 android:id="@+id/btn_one"
-                style="@style/button_style"
+                app:layout_widthPercent="33%"          
+                app:layout_heightPercent="25%"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@id/btn_four"
@@ -86,7 +93,8 @@
 
             <Button
                 android:id="@+id/btn_two"
-                style="@style/button_style"
+                app:layout_widthPercent="33%"          
+                app:layout_heightPercent="25%"
                 android:layout_below="@+id/btn_five"
                 android:layout_toEndOf="@+id/btn_one"
                 android:layout_toRightOf="@+id/btn_one"
@@ -94,7 +102,8 @@
 
             <Button
                 android:id="@+id/btn_three"
-                style="@style/button_style"
+                app:layout_widthPercent="33%"          
+                app:layout_heightPercent="25%"
                 android:text="3"
                 android:layout_below="@+id/btn_six"
                 android:layout_toEndOf="@+id/btn_two"
@@ -103,7 +112,8 @@
 
             <Button
                 android:id="@+id/btn_point"
-                style="@style/button_style"
+                app:layout_widthPercent="33%"          
+                app:layout_heightPercent="25%"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
                 android:layout_below="@id/btn_one"
@@ -111,7 +121,8 @@
 
             <Button
                 android:id="@+id/btn_zero"
-                style="@style/button_style"
+                app:layout_widthPercent="33%"          
+                app:layout_heightPercent="25%"
                 android:text="0"
                 android:layout_below="@+id/btn_two"
                 android:layout_toRightOf="@id/btn_point"
@@ -119,19 +130,21 @@
 
             <Button
                 android:id="@+id/btn_equals"
-                style="@style/button_style"
+                app:layout_widthPercent="33%"          
+                app:layout_heightPercent="25%"
                 android:text="="
                 android:layout_below="@+id/btn_three"
                 android:layout_toRightOf="@+id/btn_zero"
                 android:layout_toEndOf="@+id/btn_zero" />
 
 
-        </RelativeLayout>
+        </android.support.percent.PercentRelativeLayout>
 
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="0.2"
             android:orientation="vertical"
             android:background="#b0ea95">
 
@@ -162,17 +175,11 @@
 
         </LinearLayout>
 
-
         <View
-            android:layout_width="30dp"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="0.1"
             android:background="#53a2e7"/>
 
-
     </LinearLayout>
-
-
-
-
 </LinearLayout>
