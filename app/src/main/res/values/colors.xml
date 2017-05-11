@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources >
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="digit_panel_color">#424242</color>
+    <color name="color_action_bt">#616161</color>
+    <color name="color_right_panel">#1de9b6</color>
 </resources>
