@@ -6,14 +6,16 @@
     android:layout_height="match_parent"
     tools:context="com.korzh.user.calculator.MainActivity">
 
-    <TextView
-        android:id="@+id/tv_field"
-        android:padding="16dp"
-        app:layout_heightPercent="30%"
-        app:layout_widthPercent="100%" />
+    <HorizontalScrollView
+        android:id="@+id/sc_field"
+        style="@style/hor_scroll_style">
+        <TextView
+            android:id="@+id/tv_field"
+            style="@style/field_style"/>
+    </HorizontalScrollView>
 
     <android.support.percent.PercentRelativeLayout
-        android:layout_below="@id/tv_field"
+        android:layout_below="@id/sc_field"
         app:layout_heightPercent="70%"
         app:layout_widthPercent="100%">
 

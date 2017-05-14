@@ -7,25 +7,25 @@
     <Button
         android:id="@+id/btn_dev"
         style="@style/btn_action_land_style"
-        android:text="/" />
+        android:text="@string/dev" />
 
     <Button
         android:id="@+id/btn_mults"
         style="@style/btn_action_land_style"
         android:layout_below="@id/btn_dev"
-        android:text="*" />
+        android:text="@string/mult" />
 
     <Button
         android:id="@+id/btn_minus"
         style="@style/btn_action_land_style"
         android:layout_below="@id/btn_mults"
-        android:text="-" />
+        android:text="@string/min" />
 
     <Button
         android:id="@+id/btn_plus"
         style="@style/btn_action_land_style"
         android:layout_below="@id/btn_minus"
-        android:text="+" />
+        android:text="@string/plus" />
 
     <Button
         android:id="@+id/btn_del"
@@ -33,14 +33,14 @@
         android:layout_alignParentTop="true"
         android:layout_toEndOf="@id/btn_dev"
         android:layout_toRightOf="@id/btn_dev"
-        android:text="DEL" />
+        android:text="@string/del" />
 
     <Button
         android:id="@+id/btn_equals"
         style="@style/btn_action_land_style"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:text="=" />
+        android:text="@string/equals" />
 
     <View
         style="@style/view_action_panel_style"

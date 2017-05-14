@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Calculator</string>
+    <string name="del">DEL</string>
+    <string name="dev">/</string>
+    <string name="mult">*</string>
+    <string name="min">-</string>
+    <string name="plus">+</string>
+    <string name="equals">=</string>
+    <string name="error">Error</string>
+    <string name="field_is_empty">Field is empty</string>
 </resources>

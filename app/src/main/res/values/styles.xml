@@ -10,6 +10,7 @@
         <item name="android:gravity">center</item>
         <item name="android:textSize">18sp</item>
         <item name="android:textAllCaps">false</item>
+        <item name="android:onClick">buttonClick</item>
     </style>
 
     <style name="btn_digit_style" parent="btn_base_style">
@@ -43,6 +44,21 @@
     <style name="land_big_panel_style">
         <item name="layout_widthPercent">40%</item>
         <item name="layout_heightPercent">100%</item>
+    </style>
+
+    <style name="hor_scroll_style">
+        <item name="layout_heightPercent">30%</item>
+        <item name="layout_widthPercent">100%</item>
+    </style>
+
+    <style name="field_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center_vertical|right</item>
+        <item name="android:paddingRight">32dp</item>
+        <item name="android:paddingLeft">32dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:scrollHorizontally">true</item>
     </style>
 
 </resources>
