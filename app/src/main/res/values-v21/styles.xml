@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="view_digit_panel_style">
+        <item name="android:background">@color/digit_panel_color</item>
+        <item name="layout_widthPercent">33%</item>
+        <item name="layout_heightPercent">25%</item>
+        <item name="android:elevation">2dp</item>
+    </style>
+
+    <style name="view_action_panel_style">
+        <item name="layout_widthPercent">50%</item>
+        <item name="layout_heightPercent">50%</item>
+        <item name="android:background">@color/color_action_bt</item>
+        <item name="android:elevation">2dp</item>
+    </style>
+</resources>

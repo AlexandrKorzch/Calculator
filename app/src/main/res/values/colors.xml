@@ -6,4 +6,7 @@
     <color name="digit_panel_color">#424242</color>
     <color name="color_action_bt">#616161</color>
     <color name="color_right_panel">#1de9b6</color>
+    <color name="white">#ffffff</color>
+    <color name="grey">#004d40</color>
+    <color name="accent_material_dark">#c45baa</color>
 </resources>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/btn_inv"
+        style="@style/btn_formule_style"
+        android:layout_alignParentTop="true"
+        android:text="INV" />
+
+    <Button
+        android:id="@+id/btn_deg"
+        style="@style/btn_formule_style"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/btn_inv"
+        android:text="DEG" />
+
+    <Button
+        android:id="@+id/btn_percent"
+        style="@style/btn_formule_style"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@id/btn_deg"
+        android:text="%" />
+
+    <Button
+        android:id="@+id/btn_sin"
+        style="@style/btn_formule_style"
+        android:layout_below="@id/btn_inv"
+        android:text="sin" />
+
+    <Button
+        android:id="@+id/btn_cos"
+        style="@style/btn_formule_style"
+        android:layout_below="@id/btn_deg"
+        android:layout_toRightOf="@id/btn_sin"
+        android:text="cos" />
+
+    <Button
+        android:id="@+id/btn_tan"
+        style="@style/btn_formule_style"
+        android:layout_below="@id/btn_percent"
+        android:layout_toRightOf="@id/btn_cos"
+        android:text="sin" />
+
+    <Button
+        android:id="@+id/btn_in"
+        style="@style/btn_formule_style"
+        android:layout_below="@id/btn_sin"
+        android:text="In" />
+
+    <Button
+        android:id="@+id/btn_log"
+        style="@style/btn_formule_style"
+        android:layout_below="@id/btn_cos"
+        android:layout_toRightOf="@id/btn_in"
+        android:text="log" />
+
+    <Button
+        android:id="@+id/btn_exl"
+        style="@style/btn_formule_style"
+        android:layout_below="@id/btn_sin"
+        android:layout_toRightOf="@id/btn_cos"
+        android:text="!" />
+
+    <Button
+        android:id="@+id/btn_pi"
+        style="@style/btn_formule_style"
+        android:layout_below="@id/btn_in"
+        android:text="π" />
+
+    <Button
+        android:id="@+id/btn_e"
+        style="@style/btn_formule_style"
+        android:layout_below="@id/btn_log"
+        android:layout_toRightOf="@id/btn_pi"
+        android:text="e" />
+
+    <Button
+        android:id="@+id/btn_up"
+        style="@style/btn_formule_style"
+        android:layout_below="@id/btn_exl"
+        android:layout_toRightOf="@id/btn_e"
+        android:text="٨" />
+
+    <Button
+        android:id="@+id/btn_left_arrow"
+        style="@style/btn_formule_style"
+        android:layout_below="@id/btn_pi"
+        android:text="(" />
+
+    <Button
+        android:id="@+id/btn_right_arrow"
+        style="@style/btn_formule_style"
+        android:layout_below="@id/btn_e"
+        android:layout_toRightOf="@id/btn_left_arrow"
+        android:text=")" />
+
+    <Button
+        android:id="@+id/btn_square_root"
+        style="@style/btn_formule_style"
+        android:layout_below="@id/btn_up"
+        android:layout_toRightOf="@id/btn_right_arrow"
+        android:text="√" />
+
+</android.support.percent.PercentRelativeLayout>
+
+

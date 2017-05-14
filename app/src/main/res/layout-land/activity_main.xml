@@ -4,40 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.korzh.user.calculator.MainActivity">
 
     <TextView
         android:id="@+id/tv_field"
         android:padding="16dp"
-        app:layout_heightPercent="30%"
+        app:layout_heightPercent="33%"
         app:layout_widthPercent="100%" />
 
     <android.support.percent.PercentRelativeLayout
         android:layout_below="@id/tv_field"
-        app:layout_heightPercent="70%"
+        android:orientation="horizontal"
+        app:layout_heightPercent="67%"
         app:layout_widthPercent="100%">
 
         <FrameLayout
             android:id="@+id/digit_panel"
-            app:layout_heightPercent="100%"
-            app:layout_widthPercent="70%">
+            style="@style/land_big_panel_style">
+
             <include layout="@layout/layout_digit_panel" />
         </FrameLayout>
 
         <FrameLayout
             android:id="@+id/action_panel"
+            android:layout_toRightOf="@id/digit_panel"
             app:layout_heightPercent="100%"
-            app:layout_widthPercent="20%"
-            android:layout_toRightOf="@id/digit_panel">
-            <include layout="@layout/layout_action_panel"/>
+            app:layout_widthPercent="25%">
+
+            <include layout="@layout/layout_action_panel" />
         </FrameLayout>
 
-        <View
-            android:id="@+id/view_right_panel"
-            android:layout_toRightOf="@+id/action_panel"
-            android:background="@color/color_right_panel"
-            app:layout_heightPercent="100%"
-            app:layout_widthPercent="10%" />
+        <FrameLayout
+            style="@style/land_big_panel_style"
+            android:layout_toRightOf="@id/action_panel">
+
+            <include layout="@layout/layout_formula_panel" />
+        </FrameLayout>
 
     </android.support.percent.PercentRelativeLayout>
 </android.support.percent.PercentRelativeLayout>
