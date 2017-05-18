@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
         Interpreter interpreter = new Interpreter();
         try {
             interpreter.eval(RESULT + " = " + mFieldTv.getText().toString());
-            mFieldTv.setText(String.valueOf(interpreter.get("result")));
+            mFieldTv.setText(String.valueOf(interpreter.get(RESULT)));
         } catch (EvalError evalError) {
             Toast.makeText(this, R.string.error, Toast.LENGTH_SHORT).show();
         }
