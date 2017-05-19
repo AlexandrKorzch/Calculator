@@ -1,7 +1,9 @@
 package com.korzh.user.calculator;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -10,11 +12,13 @@ import android.widget.Toast;
 import bsh.EvalError;
 import bsh.Interpreter;
 
+import static com.korzh.user.calculator.Const.DIGIT_KEY;
 import static com.korzh.user.calculator.Const.RESULT;
 import static com.korzh.user.calculator.Const.TEXT_KEY;
 
 public class CalculatorActivity extends AppCompatActivity {
 
+    private static final String TAG = "CalculatorActivity";
     private TextView mFieldTv;
 
     @Override
@@ -24,6 +28,16 @@ public class CalculatorActivity extends AppCompatActivity {
         mFieldTv = (TextView) findViewById(R.id.tv_field);
         if (savedInstanceState != null && savedInstanceState.containsKey(TEXT_KEY)) {
             mFieldTv.setText(savedInstanceState.getString(TEXT_KEY));
+        }
+        getDigit();
+    }
+
+    private void getDigit() {
+        Intent intent = getIntent();
+        Bundle intentBundle = intent.getExtras();
+        if(intentBundle != null){
+            String digit = intentBundle.getString(DIGIT_KEY);
+            mFieldTv.setText(digit);
         }
     }
 

@@ -8,9 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 
 import java.util.Random;
 
+import static com.korzh.user.calculator.Const.DIGIT_KEY;
 import static com.korzh.user.calculator.Const.TEXT_KEY;
 
 public class SaveStateActivity extends AppCompatActivity {
@@ -19,6 +21,7 @@ public class SaveStateActivity extends AppCompatActivity {
     private static final String TAG = "SaveStateActivity";
     private static final String COLOR_KEY = "color";
     private View mView;
+    private EditText mFieldEt;
     private int mColor;
 
     @Override
@@ -35,6 +38,8 @@ public class SaveStateActivity extends AppCompatActivity {
                 start();
             }
         });
+
+        mFieldEt = (EditText)mView.findViewById(R.id.et_field);
 
         setContentView(mView);
 
@@ -60,6 +65,7 @@ public class SaveStateActivity extends AppCompatActivity {
     public void start() {
         Intent starter = new Intent();
         starter.setAction("intent.action.CALCULATE");
+        starter.putExtra(DIGIT_KEY, mFieldEt.getText().toString());
         startActivity(starter);
     }
 
