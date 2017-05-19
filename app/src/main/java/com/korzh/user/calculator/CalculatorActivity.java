@@ -12,6 +12,7 @@ import android.widget.Toast;
 import bsh.EvalError;
 import bsh.Interpreter;
 
+import static com.korzh.user.calculator.Const.COLOR_KEY;
 import static com.korzh.user.calculator.Const.DIGIT_KEY;
 import static com.korzh.user.calculator.Const.RESULT;
 import static com.korzh.user.calculator.Const.TEXT_KEY;
@@ -38,6 +39,8 @@ public class CalculatorActivity extends AppCompatActivity {
         if(intentBundle != null){
             String digit = intentBundle.getString(DIGIT_KEY);
             mFieldTv.setText(digit);
+            int color = intentBundle.getInt(COLOR_KEY);
+            mFieldTv.setBackgroundColor(color);
         }
     }
 

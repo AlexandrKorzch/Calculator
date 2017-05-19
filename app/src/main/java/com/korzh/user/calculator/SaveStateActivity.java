@@ -12,6 +12,7 @@ import android.widget.EditText;
 
 import java.util.Random;
 
+import static com.korzh.user.calculator.Const.COLOR_KEY;
 import static com.korzh.user.calculator.Const.DIGIT_KEY;
 import static com.korzh.user.calculator.Const.TEXT_KEY;
 
@@ -19,7 +20,7 @@ public class SaveStateActivity extends AppCompatActivity {
 
 
     private static final String TAG = "SaveStateActivity";
-    private static final String COLOR_KEY = "color";
+
     private View mView;
     private EditText mFieldEt;
     private int mColor;
@@ -32,12 +33,11 @@ public class SaveStateActivity extends AppCompatActivity {
         mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Random rnd = new Random();
-//                mColor = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
-//                setColor(mColor);
                 start();
             }
         });
+
+        setRandomColor();
 
         mFieldEt = (EditText)mView.findViewById(R.id.et_field);
 
@@ -47,6 +47,12 @@ public class SaveStateActivity extends AppCompatActivity {
             mColor = savedInstanceState.getInt(COLOR_KEY);
             setColor(mColor);
         }
+    }
+
+    private void setRandomColor() {
+        Random rnd = new Random();
+        mColor = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
+        setColor(mColor);
     }
 
 
@@ -66,6 +72,7 @@ public class SaveStateActivity extends AppCompatActivity {
         Intent starter = new Intent();
         starter.setAction("intent.action.CALCULATE");
         starter.putExtra(DIGIT_KEY, mFieldEt.getText().toString());
+        starter.putExtra(COLOR_KEY, mColor);
         startActivity(starter);
     }
 
