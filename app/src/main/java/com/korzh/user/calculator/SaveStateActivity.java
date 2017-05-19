@@ -1,5 +1,7 @@
 package com.korzh.user.calculator;
 
+import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
@@ -27,9 +29,10 @@ public class SaveStateActivity extends AppCompatActivity {
         mView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Random rnd = new Random();
-                mColor = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
-                setColor(mColor);
+//                Random rnd = new Random();
+//                mColor = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
+//                setColor(mColor);
+                start();
             }
         });
 
@@ -51,6 +54,13 @@ public class SaveStateActivity extends AppCompatActivity {
 
     private void setColor(int color) {
         mView.setBackgroundColor(color);
+    }
+
+
+    public void start() {
+        Intent starter = new Intent();
+        starter.setAction("intent.action.CALCULATE");
+        startActivity(starter);
     }
 
 

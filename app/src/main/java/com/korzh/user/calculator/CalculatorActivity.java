@@ -13,7 +13,7 @@ import bsh.Interpreter;
 import static com.korzh.user.calculator.Const.RESULT;
 import static com.korzh.user.calculator.Const.TEXT_KEY;
 
-public class MainActivity extends AppCompatActivity {
+public class CalculatorActivity extends AppCompatActivity {
 
     private TextView mFieldTv;
 

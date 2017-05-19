@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.korzh.user.calculator.MainActivity">
+    tools:context="com.korzh.user.calculator.CalculatorActivity">
 
     <HorizontalScrollView
         android:id="@+id/sc_field"
