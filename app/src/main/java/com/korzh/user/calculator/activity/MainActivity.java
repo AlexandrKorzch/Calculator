@@ -7,7 +7,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,8 +30,6 @@ import static com.korzh.user.calculator.general.Navigator.startGallery;
 import static com.korzh.user.calculator.general.Navigator.startPreferences;
 
 public class MainActivity extends AppCompatActivity {
-
-    private static final String TAG = "MainActivity";
 
     private View mView;
     private EditText mFieldEt;
@@ -94,11 +91,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void restoreActivityState(Bundle savedInstanceState) {
-        Log.d(TAG, "restoreActivityState() called with: savedInstanceState = [" + savedInstanceState + "]");
         if (savedInstanceState != null) {
             if (savedInstanceState.containsKey(COLOR_KEY)) {
                 mColor = savedInstanceState.getInt(COLOR_KEY);
-                Log.d(TAG, "restoreActivityState: mColor - "+mColor);
                 mView.setBackgroundColor(mColor);
             }
             if (savedInstanceState.containsKey(URI_KEY)) {
@@ -113,7 +108,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        Log.d(TAG, "onSaveInstanceState: mColor - "+mColor);
         outState.putInt(COLOR_KEY, mColor);
         outState.putParcelable(URI_KEY, mImageUri);
     }
@@ -122,7 +116,6 @@ public class MainActivity extends AppCompatActivity {
         Random rnd = new Random();
         mColor = Color.argb(rnd.nextInt(ALPHA_MAX + 1), rnd.nextInt(RED_MAX + 1),
                 rnd.nextInt(GREEN_MAX + 1), rnd.nextInt(BLUE_MAX + 1));
-        Log.d(TAG, "setRandomBackgroundColor: mColor - "+mColor);
         mView.setBackgroundColor(mColor);
     }
 
