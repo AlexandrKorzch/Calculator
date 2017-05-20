@@ -1,22 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.korzh.user.calculator.SaveStateActivity"
-    android:background="#4ebab3">
+    android:background="@color/background_color"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.korzh.user.calculator.activity.MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_picture"
+        style="@style/iv_style"
+        android:contentDescription="@string/contentdescription"/>
+
+    <Button
+        android:id="@+id/btn_goto_galery"
+        style="@style/btn_savestate_style"
+        android:text="@string/galery" />
+
+    <Button
+        android:id="@+id/btn_chose_color"
+        style="@style/btn_savestate_style"
+        android:text="@string/color" />
 
     <EditText
         android:id="@+id/et_field"
         android:layout_width="150dp"
         android:layout_height="48dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:inputType="number" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:text="@string/input_digits"
+        android:textSize="@dimen/text_normal" />
 
     <Button
-        android:layout_width="150dp"
-        android:layout_height="48dp" />
+        android:id="@+id/btn_goto_calc"
+        style="@style/btn_savestate_style"
+        android:text="@string/calculator" />
 
-</RelativeLayout>
+    <Button
+        android:id="@+id/btn_goto_pref"
+        style="@style/btn_savestate_style"
+        android:text="@string/settings" />
+
+</LinearLayout>

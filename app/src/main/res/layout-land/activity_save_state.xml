@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl_root_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context="com.korzh.user.calculator.activity.MainActivity">
+
+    <ImageView
+        android:id="@+id/iv_picture"
+        style="@style/iv_style"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:contentDescription="@string/contentdescription"/>
+
+    <Button
+        android:id="@+id/btn_chose_color"
+        style="@style/btn_savestate_style"
+        android:text="@string/color"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="13dp" />
+
+    <EditText
+        android:id="@+id/et_field"
+        android:layout_width="150dp"
+        android:layout_height="48dp"
+        android:inputType="number"
+        android:layout_alignBottom="@+id/iv_picture"
+        android:layout_toLeftOf="@+id/btn_chose_color"
+        android:layout_toStartOf="@+id/btn_chose_color"
+        android:layout_marginRight="22dp"
+        android:layout_marginEnd="22dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/input_digits"
+        android:textSize="@dimen/text_normal"
+        android:layout_marginRight="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_below="@+id/et_field"
+        android:layout_alignRight="@+id/et_field"
+        android:layout_alignEnd="@+id/et_field" />
+
+    <Button
+        android:id="@+id/btn_goto_calc"
+        style="@style/btn_savestate_style"
+        android:text="@string/calculator"
+        android:layout_marginTop="79dp"
+        android:layout_below="@+id/textView"
+        android:layout_toLeftOf="@+id/btn_chose_color"
+        android:layout_toStartOf="@+id/btn_chose_color" />
+
+    <Button
+        android:id="@+id/btn_goto_pref"
+        style="@style/btn_savestate_style"
+        android:text="@string/settings"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="22dp" />
+
+    <Button
+        android:id="@+id/btn_goto_galery"
+        style="@style/btn_savestate_style"
+        android:text="@string/galery"
+        android:layout_alignBottom="@+id/iv_picture"
+        android:layout_toRightOf="@+id/iv_picture"
+        android:layout_toEndOf="@+id/iv_picture" />
+
+</RelativeLayout>

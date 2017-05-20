@@ -9,28 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
-        <activity android:name=".CalculatorActivity">
+        <activity android:name=".activity.CalculatorActivity">
             <intent-filter>
-                <action android:name="intent.action.CALCULATE"/>
-                <category android:name="android.intent.category.DEFAULT"/>
-                <!--<data android:mimeType="text/plain"/>-->
+                <action android:name="intent.action.CALCULATE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-
         </activity>
-        <activity android:name=".SecondActivity">
-
-        </activity>
-        <activity android:name=".ThirdActivity" />
-
-        <activity android:name=".SaveStateActivity">
+        <activity android:name=".activity.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity android:name=".activity.ReadSettingsActivity"></activity>
     </application>
 
 </manifest>

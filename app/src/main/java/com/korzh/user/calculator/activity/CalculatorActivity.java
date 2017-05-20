@@ -1,35 +1,41 @@
-package com.korzh.user.calculator;
+package com.korzh.user.calculator.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.HorizontalScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.korzh.user.calculator.R;
 
 import bsh.EvalError;
 import bsh.Interpreter;
 
-import static com.korzh.user.calculator.Const.COLOR_KEY;
-import static com.korzh.user.calculator.Const.DIGIT_KEY;
-import static com.korzh.user.calculator.Const.RESULT;
-import static com.korzh.user.calculator.Const.TEXT_KEY;
+import static com.korzh.user.calculator.general.Const.COLOR_KEY;
+import static com.korzh.user.calculator.general.Const.DIGIT_KEY;
+import static com.korzh.user.calculator.general.Const.RESULT;
+import static com.korzh.user.calculator.general.Const.TEXT_KEY;
 
 public class CalculatorActivity extends AppCompatActivity {
 
-    private static final String TAG = "CalculatorActivity";
+    private HorizontalScrollView mHorizontalScrollView;
     private TextView mFieldTv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mHorizontalScrollView = (HorizontalScrollView)findViewById(R.id.sc_field);
         mFieldTv = (TextView) findViewById(R.id.tv_field);
+
         if (savedInstanceState != null && savedInstanceState.containsKey(TEXT_KEY)) {
             mFieldTv.setText(savedInstanceState.getString(TEXT_KEY));
         }
+
         getDigit();
     }
 
@@ -40,7 +46,7 @@ public class CalculatorActivity extends AppCompatActivity {
             String digit = intentBundle.getString(DIGIT_KEY);
             mFieldTv.setText(digit);
             int color = intentBundle.getInt(COLOR_KEY);
-            mFieldTv.setBackgroundColor(color);
+            mHorizontalScrollView.setBackgroundColor(color);
         }
     }
 

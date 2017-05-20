@@ -61,4 +61,21 @@
         <item name="android:scrollHorizontally">true</item>
     </style>
 
+    <style name="btn_savestate_style">
+        <item name="android:layout_width">@dimen/button_width</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">@dimen/text_normal</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">#66bb6a</item>
+        <item name="android:layout_margin">8dp</item>
+
+    </style>
+
+    <style name="iv_style">
+        <item name="android:layout_width">@dimen/iv_width</item>
+        <item name="android:layout_height">@dimen/iv_height</item>
+        <item name="srcCompat">@mipmap/ic_launcher_round</item>
+    </style>
+
 </resources>

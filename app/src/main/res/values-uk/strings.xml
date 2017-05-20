@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Калькулятор</string>
+    <string name="del">Вид</string>
+    <string name="dev">/</string>
+    <string name="mult">*</string>
+    <string name="min">-</string>
+    <string name="plus">+</string>
+    <string name="equals">=</string>
+    <string name="error">Помилка</string>
+    <string name="field_is_empty">Пусте поле</string>
+    <string name="input_digits">введiть цифри</string>
+    <string name="calculator">калькулятор</string>
+    <string name="color">колір</string>
+    <string name="galery">галерея</string>
+    <string name="settings">налаштування</string>
+</resources>
