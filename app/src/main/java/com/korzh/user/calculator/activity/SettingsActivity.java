@@ -18,9 +18,9 @@ import android.support.v7.app.ActionBar;
 import android.text.TextUtils;
 
 import com.korzh.user.calculator.R;
-import com.korzh.user.calculator.fragment.DataSyncPreferenceFragment;
-import com.korzh.user.calculator.fragment.GeneralPreferenceFragment;
-import com.korzh.user.calculator.fragment.NotificationPreferenceFragment;
+import com.korzh.user.calculator.fragment.preferences.DataSyncPreferenceFragment;
+import com.korzh.user.calculator.fragment.preferences.GeneralPreferenceFragment;
+import com.korzh.user.calculator.fragment.preferences.NotificationPreferenceFragment;
 
 import java.util.List;
 

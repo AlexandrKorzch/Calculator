@@ -1,5 +1,6 @@
 package com.korzh.user.calculator.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -93,4 +94,5 @@ public class CalculatorActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
         outState.putString(TEXT_KEY, mFieldTv.getText().toString());
     }
+
 }

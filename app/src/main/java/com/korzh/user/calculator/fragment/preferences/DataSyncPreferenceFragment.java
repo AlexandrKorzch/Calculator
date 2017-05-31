@@ -1,4 +1,4 @@
-package com.korzh.user.calculator.fragment;
+package com.korzh.user.calculator.fragment.preferences;
 
 import android.content.Intent;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package com.korzh.user.calculator.fragment;
+package com.korzh.user.calculator.fragment.preferences;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,14 +14,15 @@ import static com.korzh.user.calculator.activity.SettingsActivity.bindPreference
  * Created by alex on 5/20/17.
  */
 
-public class NotificationPreferenceFragment  extends PreferenceFragment {
+public class GeneralPreferenceFragment extends PreferenceFragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        addPreferencesFromResource(R.xml.pref_notification);
+        addPreferencesFromResource(R.xml.pref_general);
         setHasOptionsMenu(true);
-        bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_rington)));
+        bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_name)));
+        bindPreferenceSummaryToValue(findPreference(getString(R.string.pref_list)));
     }
 
     @Override

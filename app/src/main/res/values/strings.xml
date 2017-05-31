@@ -76,4 +76,7 @@
     <string name="pref_vibrate">pref_vibrate</string>
     <string name="general_switch">example_switch</string>
     <string name="contentdescription">contentDescription</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
